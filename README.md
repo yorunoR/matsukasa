@@ -30,7 +30,18 @@ Prepare configuration file `config/config.exs`.
 ```elixir
 import Config
 
-config :eoai,
+config :matsukasa,
   api_key: "your-api-key",
   environment_key: "your-environment"
+```
+
+## Example
+
+### Index
+
+```elixir
+alias Matsukasa.Index
+alias Matsukasa.IndexClient
+
+IndexClient.new() |> Index.call(:list)
 ```
