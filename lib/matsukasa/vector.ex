@@ -5,6 +5,9 @@ defmodule Matsukasa.Vector do
 
   def call(vector_client, request, args) when is_list(args) do
     case request do
+      :describe_index_stats ->
+        Vector.DescribeIndexStats.run(vector_client, args)
+
       :delete ->
         Vector.Delete.run(vector_client, args)
 
