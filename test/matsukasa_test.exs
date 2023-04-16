@@ -2,7 +2,7 @@ defmodule MatsukasaTest do
   use ExUnit.Case
   doctest Matsukasa
 
-  test "greets the world" do
-    assert Matsukasa.hello() == :world
+  test "is ok" do
+    assert Matsukasa.run() == :ok
   end
 end
