@@ -39,9 +39,22 @@ config :matsukasa,
 
 ### Index
 
+#### list
+
 ```elixir
 alias Matsukasa.Index
 alias Matsukasa.IndexClient
 
-IndexClient.new() |> Index.call(:list)
+response = IndexClient.new() |> Index.call(:list)
+response.body
+```
+
+#### describe
+
+```elixir
+alias Matsukasa.Index
+alias Matsukasa.IndexClient
+
+response = IndexClient.new() |> Index.call(:describe, index_name: "sample")
+response.body
 ```
