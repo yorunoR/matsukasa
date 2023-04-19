@@ -1,7 +1,9 @@
 defmodule Matsukasa.Index do
   alias __MODULE__
 
-  def call(index_client, request, args \\ [])
+  def call(index_client, request) do
+    call(index_client, request, [])
+  end
 
   def call(index_client, request, args) when is_list(args) do
     case request do

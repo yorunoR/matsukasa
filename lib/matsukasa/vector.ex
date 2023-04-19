@@ -1,7 +1,9 @@
 defmodule Matsukasa.Vector do
   alias __MODULE__
 
-  def call(vector_client, request, args \\ [])
+  def call(vector_client, request) do
+    call(vector_client, request, [])
+  end
 
   def call(vector_client, request, args) when is_list(args) do
     case request do
